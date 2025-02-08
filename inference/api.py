@@ -1,19 +1,25 @@
 
-# Deploy fine-tuned model as an API
+# FastAPI inference server with quantized model support
+
 from fastapi import FastAPI
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
 
 MODEL_PATH = "./models/mistral-finetuned-mk"
-model = AutoModelForCausalLM.from_pretrained(MODEL_PATH)
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 
 app = FastAPI()
 
+print("⏳ Loading model...")
+model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, torch_dtype=torch.float16, device_map="auto")
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+print("✅ Model loaded successfully!")
+
 @app.get("/generate/")
-def generate(prompt: str):
+def generate(prompt: str, max_length: int = 100):
     inputs = tokenizer(prompt, return_tensors="pt")
-    outputs = model.generate(**inputs)
-    return {"response": tokenizer.decode(outputs[0])}
+    with torch.no_grad():
+        outputs = model.generate(**inputs, max_length=max_length)
+    return {"response": tokenizer.decode(outputs[0], skip_special_tokens=True)}
 
 if __name__ == "__main__":
     import uvicorn
