@@ -1,3 +1,4 @@
+
 torch
 transformers
 accelerate
@@ -7,3 +8,6 @@ bitsandbytes
 sentencepiece
 requests
 beautifulsoup4
+flask
+fastapi
+uvicorn

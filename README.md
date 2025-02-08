@@ -2,39 +2,30 @@
 # 🇲🇰 MK-LLM: Open Macedonian Language Model
 
 ## 🌍 About This Project
-MK-LLM is an **open-source initiative** led by **AI Now - Association for Artificial Intelligence in Macedonia** 🇲🇰 to build the **first Macedonian Large Language Model (LLM)**.
+**MK-LLM** is a fully open-source Macedonian Large Language Model (LLM) developed by **AI Now - Association for Artificial Intelligence in Macedonia**. This project is built **for and by the open-source community**, aiming to bring **state-of-the-art NLP capabilities** to the Macedonian language.
 
 📌 **Website:** [www.ainow.mk](https://www.ainow.mk)  
 📩 **Contact:** [contact@ainow.mk](mailto:contact@ainow.mk)  
 
-## 📂 Repository Structure
-See `docs/STRUCTURE.md` for a full breakdown of this repository.
+## 📂 Repository Overview
+- `data/` → Scripts for **data collection, cleaning, and tokenization**.
+- `training/` → Scripts for **fine-tuning the model**.
+- `models/` → Directory for **storing trained models**.
+- `inference/` → Scripts to **deploy the trained model as an API**.
+- `notebooks/` → Jupyter notebooks for research & evaluation.
+- `scripts/` → Utility scripts for automation.
+- `docs/` → Project documentation and guidelines.
 
-## 🚀 Get Started
-1️⃣ **Clone the Repository**  
+## 🚀 How to Get Started
 ```bash
 git clone https://github.com/AI-now-mk/MK-LLM.git
 cd MK-LLM
-```
-
-2️⃣ **Install Dependencies**  
-```bash
 pip install -r requirements.txt
 ```
 
-3️⃣ **Process Data and Train the Model**  
-See `docs/GETTING_STARTED.md`.
-
----
-
 ## 🤝 How to Contribute
-See `CONTRIBUTING.md` for details.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for details.
 
 ---
 
-## 📢 Join the Community
-We welcome developers, AI researchers, and linguists to collaborate.  
-- Report issues & suggest improvements in **GitHub Issues**.
-- Stay updated with AI Now's **news & research** at [www.ainow.mk](https://www.ainow.mk).
-
-🚀 **AI for Macedonia! 🇲🇰**
+🚀 **Join AI Now in making AI accessible to Macedonia!** 🇲🇰
