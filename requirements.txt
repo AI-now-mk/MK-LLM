@@ -1,0 +1,9 @@
+torch
+transformers
+accelerate
+datasets
+peft
+bitsandbytes
+sentencepiece
+requests
+beautifulsoup4
