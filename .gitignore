@@ -1,0 +1,27 @@
+# Private directory
+private/
+
+# Data directories
+data/raw/
+data/cleaned/
+data/wikipedia/processed/
+
+# Model files
+models/
+*.bin
+*.pt
+*.pth
+
+# Credentials
+.env
+*.key
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
