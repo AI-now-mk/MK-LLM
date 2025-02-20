@@ -8,7 +8,7 @@ MK-LLM is Macedonia's first open-source Large Language Model (LLM), developed fo
 🛠 **Model:** [MK-LLM-Mistral](https://huggingface.co/ainowmk/MK-LLM-Mistral)  
 💻 **GitHub:** [MK-LLM](https://github.com/AI-now-mk/MK-LLM)
 
-## 🆕 Latest Updates (2024-01-09)
+## 🆕 Latest Updates (19.02.2025)
 - Implemented Mistral-7B training pipeline
 - Added comprehensive data collection system
 - Integrated Wikipedia and public data sources
